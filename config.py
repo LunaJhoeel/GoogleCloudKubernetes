@@ -1,0 +1,5 @@
+PROJECT_ID = "853577049619"
+SECRET_ID = "secret_name"
+VERSION_ID = "latest"
+BUCKET_NAME = "jhoeel_iris_bucket"
+FILE_NAME = "iris_data.csv"
