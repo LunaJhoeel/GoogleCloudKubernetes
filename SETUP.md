@@ -22,5 +22,3 @@ docker container prune -f
 ### Remove image
 docker rmi scrt_image
 
-
-gcloud auth activate-service-account --key-file=/home/jhoeel/gcp/cloud_storage/storage_secret/secrets/pruductiv-1604a8e42e51.json

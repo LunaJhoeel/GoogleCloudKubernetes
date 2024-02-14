@@ -8,6 +8,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /app
 
-ENV GOOGLE_APPLICATION_CREDENTIALS=secrets/pruductiv-1604a8e42e51.json
+ENV GOOGLE_APPLICATION_CREDENTIALS=secrets/keys.json
 
 CMD ["python", "main.py"]
