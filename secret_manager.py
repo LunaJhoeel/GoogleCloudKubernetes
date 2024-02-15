@@ -25,6 +25,6 @@ def update_keys_file(project_id, secret_id, version_id, file_name='ce.json'):
     # Print success message
     print(f"Successfully updated {file_name} with secret data.")
 
-# Example usage
+
 update_keys_file(PROJECT_ID, SECRET_ID, VERSION_ID)
 
