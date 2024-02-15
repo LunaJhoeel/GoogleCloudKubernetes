@@ -17,18 +17,7 @@ from sklearn.metrics import accuracy_score
 import tempfile
 import os
 
-# def access_secret_version(project_id, secret_id, version_id):
-#     client = secretmanager.SecretManagerServiceClient()
-#     name = f"projects/{project_id}/secrets/{secret_id}/versions/{version_id}"
-#     response = client.access_secret_version(request={"name": name})
-#     return response.payload.data.decode("UTF-8")
 
-# # Access secret from secret manager
-# secret_content = access_secret_version(PROJECT_ID, SECRET_ID, VERSION_ID)
-# credentials = service_account.Credentials.from_service_account_info(json.loads(secret_content))
-
-# Initialize storage client
-# storage_client = storage.Client(credentials=credentials)
 storage_client = storage.Client()
 bucket = storage_client.get_bucket(BUCKET_NAME)
 

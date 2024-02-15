@@ -27,7 +27,7 @@ COPY . /app
 ENV GOOGLE_APPLICATION_CREDENTIALS=keys.json
 
 # Run the secret manager script
-#RUN python secret_manager.py
+RUN python secret_manager.py
 
 # Set environment variable for Google application credentials
 ENV GOOGLE_APPLICATION_CREDENTIALS=full_access.json
