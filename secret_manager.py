@@ -8,7 +8,7 @@ def access_secret_version(project_id, secret_id, version_id):
     response = client.access_secret_version(request={"name": name})
     return response.payload.data.decode("UTF-8")
 
-def update_keys_file(project_id, secret_id, version_id, file_name='full_access.json'):
+def update_keys_file(project_id, secret_id, version_id, file_name='ce.json'):
     # Fetch secret
     secret_data = access_secret_version(project_id, secret_id, version_id)
 
@@ -18,7 +18,7 @@ def update_keys_file(project_id, secret_id, version_id, file_name='full_access.j
     except json.JSONDecodeError:
         raise ValueError("The fetched secret data is not in valid JSON format")
 
-    # Write the secret data to the specified file (defaults to full_access.json)
+    # Write the secret data to the specified file
     with open(file_name, 'w') as file:
         json.dump(secret_data_dict, file, indent=4)
 

@@ -30,10 +30,10 @@ ENV GOOGLE_APPLICATION_CREDENTIALS=keys.json
 RUN python secret_manager.py
 
 # Set environment variable for Google application credentials
-ENV GOOGLE_APPLICATION_CREDENTIALS=full_access.json
+ENV GOOGLE_APPLICATION_CREDENTIALS=ce.json
 
-# Debug: Show the contents of the service account file
-RUN cat $GOOGLE_APPLICATION_CREDENTIALS
+# # Debug: Show the contents of the service account file
+# RUN cat $GOOGLE_APPLICATION_CREDENTIALS
 
 # Activate the service account with the new credentials
 RUN gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS

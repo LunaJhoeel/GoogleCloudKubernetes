@@ -161,4 +161,4 @@ cython_debug/
 
 # Creds
 keys.json
-full_access.json
+ce.json
