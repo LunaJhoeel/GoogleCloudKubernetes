@@ -160,4 +160,5 @@ cython_debug/
 #.idea/
 
 # Creds
-secrets/
+keys.json
+full_access.json

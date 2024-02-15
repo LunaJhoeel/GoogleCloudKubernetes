@@ -11,14 +11,16 @@ pip install -r requirements.txt
 python main.py
 
 ### Build image
-docker build -t scrt_image .
+docker build -t production_image .
 
 ### Create container
-docker run --name scrt_container scrt_image
+docker run --name production_container production_image
 
-### Remove container
-docker container prune -f
 
-### Remove image
-docker rmi scrt_image
 
+docker run --name production_container -v /home/jhoeel/gcp/cloud_storage/storage_secret/keys.json:/key.json -e GOOGLE_APPLICATION_CREDENTIALS=/key.json production_image
+
+docker run -it --entrypoint /bin/bash --name production_container -v /home/jhoeel/gcp/cloud_storage/storage_secret/keys.json:/key.json -e GOOGLE_APPLICATION_CREDENTIALS=/key.json production_image
+
+### Remove container and image
+docker container prune -f && docker rmi production_image

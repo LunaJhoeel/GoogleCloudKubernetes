@@ -1,5 +1,6 @@
 PROJECT_ID = "853577049619"
-SECRET_ID = "secret_name"
+SECRET_ID = "secret_identifier"
 VERSION_ID = "latest"
 BUCKET_NAME = "jhoeel_iris_bucket"
-FILE_NAME = "iris_data.csv"
+DATA_FILE_NAME = "iris_data.csv"
+TARGET_FILE_NAME = "iris_target.csv"

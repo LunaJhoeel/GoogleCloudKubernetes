@@ -114,6 +114,3 @@ Scripts/
 .vscode
 **/*.pyc
 **/__pycache__
-
-# Models
-sqlcoder-7b-q5_k_m.gguf
