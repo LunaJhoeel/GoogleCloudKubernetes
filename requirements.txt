@@ -5,3 +5,4 @@ google-cloud-secret-manager==2.18.1
 google-cloud-aiplatform==1.41.0
 pandas==2.2.0
 kfp==2.7.0
+numpy==1.26.4
